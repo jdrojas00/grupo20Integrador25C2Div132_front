@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  overflow: hidden;
+  background-color: #d60000;
+}
+
+.preview {
+  width: 100%;
+  height: 100%;
+  border: none;
+  filter: brightness(1.0);
+  pointer-events: none;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #00000066;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.popup input {
+  padding: 9px;
+  width: 80%;
+  margin-top: 15px;
+}
+
+.popup #continuar-boton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup #admin-boton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(114, 115, 116);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.popup #admin-boton:hover {
+  background-color: rgb(90, 91, 92);
+}
+
+.popup #continuar-boton:hover {
+  background-color: darkred;
+}
+
+.usuario-error {
+  color: red;
+  padding-top: 4px;
+}

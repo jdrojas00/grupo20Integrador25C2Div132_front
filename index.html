@@ -3,19 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futbol para todos</title>
-  <link rel="icon" href="img/logo.png" type="image/png">
-  <link rel="stylesheet" href="css/styles.css">
-
-  
-  <meta http-equiv="refresh" content="2;url=bienvenida.html">
+  <title>Bienvenida - Futbol para Todos</title>
+  <link rel="stylesheet" href="css/bienvenida.css">
+  <script defer src="js/bienvenida.js"></script>
 </head>
 <body>
-  
-  <div class="pantalla-carga">
-    <img src="img/logo.png" alt="Logo" class="logo">
-    <h1>Futbol para todos</h1>
-    <p>Redirigiendo a la pantalla de bienvenida...</p>
+  <div class="overlay"></div>
+
+  <div class="popup">
+    <h2>Bienvenido a Futbol para Todos</h2>
+    <p>Por favor, ingrese su nombre para continuar</p>
+    <input type="text" id="nombreUsuario">
+    <div id="usuario-error" class="usuario-error"></div>
+    <button id="continuar-boton">Continuar</button>
+    <div>
+      <button id="admin-boton">Ingresar como Administrador</button>
+    </div>
   </div>
 </body>
 </html>

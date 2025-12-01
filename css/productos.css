@@ -1,0 +1,162 @@
+.barra-nav {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 14px;
+}
+
+body {
+  font-family: Montserrat;
+  margin: 0;
+  background-color: #ebeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  padding: 16px 0px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 32px 0px;
+  justify-items: center;
+}
+
+.card-producto {
+  background-color: white;
+  border-radius: 8px;
+  padding: 19px;
+  width: 350px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-producto img {
+  width: 100%;
+  height: 350px;
+  object-fit: contain;
+}
+
+.card-producto h3 {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.boton {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 11px 115px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.boton:hover {
+  background-color: #cc0000;
+}
+
+.paginacion {
+  display: flex;
+  padding: 16px 0px 32px 0px;
+  gap: 8px;
+}
+
+.paginacion .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.paginacion .dot.active {
+  opacity: 1;
+}
+
+.selector-cantidad {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #ff0000;
+  border-radius: 6px;
+  padding: 2px 2px;
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: bold;
+  color: #333;
+}
+
+.selector-cantidad button {
+  background: none;
+  border: none;
+  color: #ff0000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selector-cantidad button:hover {
+  color: #cc0000;
+}
+
+.contenedor-boton {
+  display: flex;
+  justify-content: center;
+}
+
+/*Media Query*/
+
+/* 1 columna para celulares */
+@media (max-width: 600px) {
+  .grid-productos {
+    grid-template-columns: 1fr;
+    max-width: 90%;
+  }
+
+  .card-producto {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-producto img {
+    height: 300px;
+  }
+}
