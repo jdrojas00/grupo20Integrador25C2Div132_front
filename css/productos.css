@@ -3,6 +3,17 @@
   align-items: center;
 }
 
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* separación entre logo y título */
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+}
+
 a {
   margin-left: 30px;
   text-decoration: none;
