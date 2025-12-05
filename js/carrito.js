@@ -76,7 +76,7 @@ function eliminar(id) {
   renderCarrito();
 }
 
-function enviarCompra() {
+async function enviarCompra() {
   const datos = JSON.parse(localStorage.getItem("ticket"));
 
   if (!datos) {
@@ -92,24 +92,30 @@ function enviarCompra() {
     precio_total: datos.total
   };
 
-  fetch("http://localhost:3000/api/ticket", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(compra)
-  })
-    .then(res => {
-      if (!res.ok) console.log("Error en la compra");
-      return res.json();
-    })
-    .catch(err => {
-      console.log("Error:", err);
-      alert("No se pudo completar la compra.");
+  try {
+    const res = await fetch("http://localhost:3000/api/ticket", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(compra)
     });
+
+    if (!res.ok) {
+      const errorData = await res.json();
+      console.error("Error en la compra:", errorData);
+    }
+    
+    console.log("Compra enviada con éxito.");
+    return await res.json();
+
+  } catch (err) {
+    console.log("Error:", err);
+    alert("No se pudo completar la compra: " + err.message);
+  }
 }
 
-btnFinalizar.addEventListener("click", () => {
+btnFinalizar.addEventListener("click", async () => {
   if (carrito.length === 0) {
     alert("El carrito está vacío");
     return;
@@ -128,9 +134,14 @@ btnFinalizar.addEventListener("click", () => {
 
   localStorage.setItem("ticket", JSON.stringify(ticket));
 
-  enviarCompra();
+  try {
+    await enviarCompra(); 
+    
+    window.location.href = "ticket.html"; 
 
-  window.location.href = "ticket.html";
+  } catch (error) {
+    console.error("Fallo en el proceso de compra.");
+  }
 });
 
 renderCarrito();
