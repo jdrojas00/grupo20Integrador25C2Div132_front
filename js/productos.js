@@ -166,7 +166,7 @@ function crearPaginador(lista, containerId, paginacionId) {
       html += `
         <div class="card-producto">
           <img src="http://localhost:3000/${prod.imagen}" alt="${prod.nombre}">
-          <h3>${prod.nombre}</h3>
+          <h3><a href="detalle.html?id=${id}" class="link-detalle">${prod.nombre}</a></h3>
           <p class="precio">$${prod.precio.toLocaleString("es-AR")}</p>
           
           <div class="contenedor-boton" id="btn-container-${id}">

@@ -45,5 +45,5 @@ document.getElementById("btnReiniciar").addEventListener("click", () => {
   localStorage.removeItem("carrito");
   localStorage.removeItem("nombreUsuario");
 
-  window.location.href = "index.html";
+  window.location.href = "encuesta.html";
 });
