@@ -29,7 +29,7 @@ form.addEventListener("submit", async (e) => {
     const formData = new FormData(form);
 
     try {
-        const resp = await fetch("http://localhost:3000/api/encuestas", {
+        const resp = await fetch("http://localhost:3000/api/encuesta", {
             method: "POST",
             body: formData
         });
@@ -44,11 +44,14 @@ form.addEventListener("submit", async (e) => {
         // Mostrar modal de éxito
         modal.classList.remove("hidden");
 
+   
+
     } catch (error) {
         console.error("Error:", error);
         alert("Hubo un problema con el servidor.");
     }
 });
+
 
 // ---- BOTÓN OMITIR ----
 omitir.addEventListener("click", () => {
