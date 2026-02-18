@@ -2,6 +2,13 @@ const form = document.getElementById("form-encuesta");
 const modal = document.getElementById("modal-ok");
 const cerrarModal = document.getElementById("cerrar-modal");
 const omitir = document.getElementById("omitir");
+const puntuacionInput = document.getElementById("puntuacion");
+const scoreDisplay = document.getElementById("scoreDisplay");
+
+
+puntuacionInput.addEventListener("input", (e) => {
+    scoreDisplay.textContent = e.target.value;
+});
 
 // ---- VALIDACIONES SIMPLES ----
 function validarFormulario() {

@@ -8,18 +8,39 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+:root {
+  --bg-color: #f2f4f7;
+  --header-bg: #fff;
+  --card-bg: #fff;
+  --text-color: #111;
+  --accent-color: #ff0000;
+  --accent-hover: #cc0000;
+  --secondary-color: #555;
+}
+
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --header-bg: #2d2d2d;
+  --card-bg: #3d3d3d;
+  --text-color: #e0e0e0;
+  --accent-color: #ff4444;
+  --accent-hover: #cc3333;
+  --secondary-color: #ccc;
+}
+
 body {
-    background-color: #f2f4f7;
+    background-color: var(--bg-color);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: var(--text-color);
 }
 
 /* =========================
    NAVBAR
 ========================= */
 header {
-    background: #fff;
+    background: var(--header-bg);
     border-bottom: 1px solid #ddd;
 }
 
@@ -45,12 +66,13 @@ header {
 .titulo {
     font-size: 22px;
     font-weight: 800;
+    color: var(--text-color);
 }
 
 .barra-nav a {
     margin-left: 22px;
     text-decoration: none;
-    color: #111;
+    color: var(--text-color);
     font-size: 16px;
 }
 
@@ -60,7 +82,7 @@ header {
 .container {
     max-width: 1200px;
     margin: 60px auto;
-    background: #fff;
+    background: var(--card-bg);
     padding: 90px;
     border-radius: 22px;
     box-shadow: 0 14px 45px rgba(0,0,0,0.18);
@@ -75,7 +97,7 @@ header {
 
 .container p {
     font-size: 20px;
-    color: #555;
+    color: var(--secondary-color);
     margin-bottom: 50px;
 }
 

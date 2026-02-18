@@ -1,8 +1,34 @@
+:root {
+  --bg-color: #ebeaea;
+  --header-bg: white;
+  --card-bg: white;
+  --text-color: #333;
+  --accent-color: #ff0000;
+  --accent-hover: #cc0000;
+  --dot-bg: #ff0000;
+  --selector-border: #ff0000;
+  --selector-text: #333;
+  --secondary-bg: #444;
+}
+
+.dark-theme {
+  --bg-color: #1a1a1a;
+  --header-bg: #2d2d2d;
+  --card-bg: #3d3d3d;
+  --text-color: #e0e0e0;
+  --accent-color: #ff4444;
+  --accent-hover: #cc3333;
+  --dot-bg: #ff4444;
+  --selector-border: #ff4444;
+  --selector-text: #e0e0e0;
+  --secondary-bg: #666;
+}
+
 .ticket-container {
     width: 90%;
     max-width: 650px;
     margin: 30px auto;
-    background: white;
+    background: var(--card-bg);
     padding: 25px;
 }
 
@@ -10,12 +36,13 @@
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 .ticket-info {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #444;
+    color: var(--text-color);
 }
 
 .ticket-producto {
@@ -32,6 +59,7 @@
     font-size: 24px;
     font-weight: bold;
     margin-top: 20px;
+    color: var(--text-color);
 }
 
 #btnDescargar,
@@ -48,11 +76,16 @@
 }
 
 #btnDescargar {
-    background: #444;
+    background: var(--secondary-bg);
     color: white;
 }
 
 #btnReiniciar {
-    background: #d60000;
+    background: var(--accent-color);
     color: white;
+}
+
+#ticket-pdf {
+    text-align: center;
+    padding: 20px;
 }

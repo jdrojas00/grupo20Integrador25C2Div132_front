@@ -9,6 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
   <link rel="shortcut icon" href="img/logo.png">
   <script defer src="js/ticket.js"></script>
+  <script defer src="js/theme.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <title>Ticket - Futbol para Todos</title>
 </head>
 
@@ -24,13 +26,16 @@
         <div><a href="productos.html">Inicio</a></div>
         <div><a href="carrito.html">Carrito</a></div>
         <div><a href="ticket.html">Ticket</a></div>
+        <button id="theme-toggle" style="background: none; border: none; font-size: 20px; cursor: pointer;">🌙</button>
       </div>
     </nav>
   </header>
 
-  <h2>Ticket de Compra</h2>
+  <div id="ticket-pdf">
+    <h2>Ticket de Compra</h2>
 
-  <div class="ticket-container" id="ticketContainer"></div>
+    <div class="ticket-container" id="ticketContainer"></div>
+  </div>
 
   <button id="btnDescargar">Descargar PDF</button>
   <button id="btnReiniciar">Volver al inicio</button>
